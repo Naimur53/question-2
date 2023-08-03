@@ -89,7 +89,9 @@ nav{
 .buttons-wrap button:hover{
   scale: 0.96;
 }
-
+.menu{
+  display: none;
+}
 .menu-button{
   background-color: transparent;
   position: relative; 
@@ -130,10 +132,13 @@ nav{
   padding-top: 90px;
   padding-left:12px ;
   opacity: 0;
+  display: none;
   transition: all .3s ease-in-out;
+  pointer-events: none;
 }
 .mobile-items-wrap.active{
   opacity: 1;
+  pointer-events: all;
 }
 .mobile-items-wrap ul{
   list-style: none;
@@ -221,8 +226,13 @@ nav{
 .banner-img{
   max-width: 500px;
   width: 100%;
+  transition: all .3s ease-in-out;
+  scale: 1;
 }
 
+.banner-img:hover{
+  scale: 1.02;
+}
 /* responsive */
 @media (max-width: 1280px) {
   /* Your CSS rules specific to phones go here */
@@ -247,6 +257,16 @@ nav{
   }
   .nav-links-wrap, .buttons-wrap{
     display: none;
+  }
+  .menu{
+    display: block;
+  }
+  .mobile-items-wrap{
+    display: block;
+    max-width: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+  
   }
 
   .content .tag-line{
@@ -278,6 +298,13 @@ nav{
   gap: 78px;
   padding-top: 50px;
 }
+.mobile-items-wrap{
+  display: block;
+  max-width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
 .content .heading{
   font-size: 40px;
   color: #fff;
@@ -295,6 +322,7 @@ nav{
   font-size: 16px;
   margin-top: 20px;
 }
+
 .content .download-button .download-arrow{
   width:21px;
 }
