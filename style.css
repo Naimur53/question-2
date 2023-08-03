@@ -190,12 +190,21 @@ nav{
   letter-spacing: 5px;
   margin-left: 10px;
   font-weight: 500;
-
+  transition: all .3s ease-in-out ;
+}
+.content .tag-line:hover{
+  color: #fff;
 }
 .content .heading{
   font-size: 57px;
   color: #fff;
   font-weight: 600;
+  text-shadow: 1px 1px 20px transparent;
+  transition: all .3s ease-in-out;
+
+}
+.content .heading:hover{
+  text-shadow: 1px 1px 20px gray;
 }
 .content .download-button{
   width:188px ;
